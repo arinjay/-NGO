@@ -1,0 +1,27 @@
+<h1 align="center">The ones who made the right choice</h1>
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3" >
+  <table class="table table-bordered ">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Email Id</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @donate.each do |donate| %>
+      <tr>
+        <td><%= donate.name %></td>
+        <td><%= donate.amount%></td>
+        <td><%= donate.email_id%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<%= link_to "Donate", new_donate_path ,class: "col-md-6 col-md-offset-3 btn btn-success"%>
+</div>
